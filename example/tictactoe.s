@@ -1,22 +1,22 @@
 .include "req_syscalls.s"
 
-// TODO: Make it actually report the winner.
-// This does no error handling
-
-.equ O, 'o'
-.equ X, 'x'
-.equ BLANK, ' '
-
 .equ BOARD_ROWS, 3
 // Last column is dummy column reserved for newline. Makes parsing easier
 .equ BOARD_COLS, 4
 .equ BOARD_SIZE, BOARD_ROWS * BOARD_COLS
 
+// XXX: This program does no error handling, but this is how you would define an
+// error return value and an error message if it did.
 .equ ERR_BAD_BOARD, 128
-
 .data
 ERRMSG_BAD_BOARD: .ascii "Invalid board. Board must be 3 by 3 with rows split by newlines"
 .equ ERRMSG_BAD_BOARD_LEN, . - ERRMSG_BAD_BOARD
+
+// XXX: This program doesn't report the winners, but these would be potentially
+// useful constants if they did.
+.equ O, 'o'
+.equ X, 'x'
+.equ BLANK, ' '
 
 .bss
 board: .skip BOARD_SIZE

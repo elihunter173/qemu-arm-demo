@@ -2,12 +2,11 @@
   @author Eli W. Hunter
   @file req_syscalls.s
 
-  Collection of syscall-related constants required to complete
-  tictactoe_validate.s.
+  Collection of syscall-related constants required to complete tictactoe.s.
 */
 
-// Linux syscall numbers for ARM. See
-// https://github.com/strace/strace/blob/master/linux/arm/syscallent.h
+// Linux syscall numbers for ARM32. See
+// https://chromium.googlesource.com/chromiumos/docs/+/master/constants/syscalls.md#arm-32_bit_EABI
 .equ SYS_EXIT, 1
 .equ SYS_READ, 3
 .equ SYS_WRITE, 4
