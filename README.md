@@ -3,8 +3,6 @@
 A demo of developing and testing ARM assembly Linux user-mode programs
 using [QEMU].
 
-[QEMU]: https://www.qemu.org/
-
 This demo was written with NC State University's CSC 236 - Computer
 Organization and Assembly Language for Computer Scientists in mind. However, it
 also demonstrates how to set up user-mode emulation of any ARM binary, cross
@@ -25,9 +23,9 @@ Linux (WSL). However, if you run into issues with the following instructions, a
 [Vagrant](#vagrant) section for details on how to set that up.
 
 *Note:* All of the instructions below include instructions on how to install
-[make] and [bats]. They are not required, but they do make building and testing
-things easier and are used in my example. Feel free to ignore them if you
-prefer other tools / doing it manually.
+make and [bats]. They are not required, but they do make building and testing
+things easier and are used in my example. Feel free to ignore them if you prefer
+other tools / doing it manually.
 
 ### Debian / Ubuntu
 
@@ -91,8 +89,6 @@ Once you have done that, congratulations! You now have a working VM. Vagrant
 has automatically mounted this repo's root directory onto `/vagrant`, so you
 should be able to see (and edit) all the files in the VM easily.
 
-[Vagrant]: https://www.vagrantup.com/
-
 ## Usage
 
 To cross-build your programs, you use the same commands (e.g. `as`, `ld`) that
@@ -118,7 +114,12 @@ Look at `example/` for more details and a concrete set up.
 
 ## Extra Links
 
-* GNU Assembler Reference: http://tigcc.ticalc.org/doc/gnuasm.html
-* Linux Syscall Numbers for ARM:
-  https://github.com/strace/strace/blob/master/linux/arm/syscallent.h
+* GNU Assembler Reference: <http://tigcc.ticalc.org/doc/gnuasm.html>
+* Linux Syscall Numbers for ARM32:
+  <https://chromium.googlesource.com/chromiumos/docs/+/master/constants/syscalls.md#arm-32_bit_EABI>
 * Linux Syscall Calling Conventions: `man 2 syscall`
+
+[AUR]: https://aur.archlinux.org/
+[QEMU]: https://www.qemu.org/
+[Vagrant]: https://www.vagrantup.com/
+[bats]: https://github.com/bats-core/bats-core
